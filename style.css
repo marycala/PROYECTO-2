@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Raleway&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif, 'Raleway', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+:root {
+  /* COLORS */
+  --vr-color-1: #fff;
+  --vr-color-2: #cccccc;
+  --vr-color-3: #ffa90d;
+  --vr-color-4: #ff6000;
+  --vr-color-5: #333333;
+
+  --vr-color-border-box: var(--vr-color-2);
+  --vr-color-button: var(--vr-color-4);
+  --vr-color-text-button: var(--vr-color-1);
+
+  --vr-stars-on: var(--vr-color-3);
+  --vr-stars-off: var(--vr-color-2);
+
+  /* SPACING */
+  --vr-margin-xs: 10px;
+  --vr-margin-s: 20px;
+  --vr-margin-m: 30px;
+  --vr-margin-l: 40px;
+  --vr-margin-xl: 50px;
+
+  --vr-padding-xs: 10px;
+  --vr-padding-s: 20px;
+  --vr-padding-m: 30px;
+  --vr-padding-l: 40px;
+  --vr-padding-xl: 150px;
+
+  --vr-gap-xs: 10px;
+  --vr-gap-s: 20px;
+  --vr-gap-m: 30px;
+  --vr-gap-l: 40px;
+  --vr-gap-xl: 50px;
+
+  --vr-border-radius-s: 4px;
+  --vr-border-radius-m: 1rem;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--vr-gap-l);
+}
+
+body {
+  width: 100%;
+  min-height: 100svh;
+}
+
+header {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--vr-padding-l);
+}
+
+.logo {
+  width: 200px;
+}
+
+.burguer {
+  display: none;
+}
+
+#menu > img {
+  width: 30px;
+  height: 30px;
+}
+
+main {
+  display: flex;
+}
+
+.products {
+  width: 80%;
+  gap: var(--vr-gap-xl);
+  padding: 0px var(--vr-padding-s);
+}
+
+.products > div {
+  width: 250px;
+  line-height: 25px;
+}
+
+.products > div:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.imgContainer {
+  width: 80%;
+  height: 200px;
+}
+
+.imgContainer > img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.estrellas {
+  gap: var(--vr-gap-xs);
+}
+
+.estrella {
+  width: 20px;
+  height: 20px;
+  background-color: var(--vr-stars-off);
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+}
+
+.rellena {
+  background-color: var(--vr-stars-on);
+}
+
+.valoration {
+  gap: var(--vr-gap-xs);
+}
+
+.filter {
+  width: 20%;
+  height: 50svh;
+  gap: var(--vr-gap-s);
+  padding: var(--vr-padding-l);
+  padding-top: var(--vr-padding-xl);
+  display: flex;
+  flex-direction: column;
+}
+
+.filter > select,
+.filter > input,
+.filter > button {
+  border-color: var(--vr-color-border-box);
+  border-radius: var(--vr-border-radius-s);
+}
+
+.filter > select {
+  background-color: var(--vr-color-2);
+}
+
+.filter > select,
+.filter > input {
+  height: 40px;
+}
+
+.filter > button {
+  width: 120px;
+  height: 30px;
+}
+
+footer {
+  width: 100%;
+  height: 30%;
+  padding-top: var(--vr-padding-l);
+}
+
+.compromisos {
+  width: 100%;
+  min-height: 800px;
+}
+
+.compromisos img {
+  width: 250px;
+  height: 250px;
+  object-fit: contain;
+  border-radius: var(--vr-border-radius-m);
+}
+
+.compromisos h4 {
+  display: flex;
+  justify-content: center;
+}
+
+footer > div {
+  width: 100%;
+  height: 100px;
+  margin-top: var(--vr-margin-xl);
+}
+
+@media (max-width: 1100px) {
+  main {
+    display: block;
+  }
+
+  .filter {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: var(--vr-padding-s);
+    padding-top: var(--vr-padding-l);
+  }
+
+  .products {
+    width: 100%;
+  }
+}
+
+@media (max-width: 730px) {
+  header > nav {
+    display: none;
+  }
+
+  .burguer {
+    display: flex;
+    width: 50px;
+    height: 50px;
+  }
+}
